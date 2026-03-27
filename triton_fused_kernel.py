@@ -4,7 +4,7 @@ import triton.language as tl
 
 @triton.jit
 def fused_gemm_relu_kernel(
-    A_ptr, B_ptr, C_ptr, bias_ptr,
+    A_ptr, B_ptr, C_ptr, bias_ptr,  # pointers to GPU
     M, N, K,
     stride_am, stride_ak,
     stride_bk, stride_bn,
